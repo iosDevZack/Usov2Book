@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XbT-sx-uEy">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Красная сцена-->
+        <scene sceneID="Gen-Kc-3nx">
+            <objects>
+                <viewController storyboardIdentifier="redViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iRr-Zc-hgO" customClass="ViewController" customModule="Navigation_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RGg-ab-6Vb">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7b-33-byx">
+                                <rect key="frame" x="16" y="493" width="358" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="К зеленой сцене">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                    <color key="baseForegroundColor" red="0.40421409749999998" green="0.79514774659999998" blue="0.38354020300000002" alpha="0.98996274829999997" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="toGreenScene:" destination="iRr-Zc-hgO" eventType="touchUpInside" id="dIw-Su-Bik"/>
+                                    <action selector="toGreenScene:" destination="Ti9-8x-uoQ" eventType="touchUpInside" id="dNG-a4-tfY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ut8-9r-phh"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="Y7b-33-byx" firstAttribute="top" secondItem="Ut8-9r-phh" secondAttribute="top" constant="319" id="16n-Dk-oph"/>
+                            <constraint firstItem="Ut8-9r-phh" firstAttribute="trailing" secondItem="Y7b-33-byx" secondAttribute="trailing" constant="16" id="dXD-Vu-ktU"/>
+                            <constraint firstItem="Y7b-33-byx" firstAttribute="leading" secondItem="Ut8-9r-phh" secondAttribute="leading" constant="16" id="rDj-bS-Lg9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Красная сцена" prompt="доп ифна" largeTitleDisplayMode="always" id="OwD-CD-jYG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u3L-TS-oA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Ti9-8x-uoQ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4161.538461538461" y="839.57345971563973"/>
+        </scene>
+        <!--Зеленая сцена-->
+        <scene sceneID="cxJ-Be-k2M">
+            <objects>
+                <viewController storyboardIdentifier="greenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bmC-3C-qXQ" customClass="ViewController" customModule="Navigation_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BSN-BX-Mif">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bs-tN-c3S">
+                                <rect key="frame" x="16" y="400" width="358" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="К желтой сцене">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="toYellowScene:" destination="bmC-3C-qXQ" eventType="touchUpInside" id="3Gq-9t-1gY"/>
+                                    <action selector="toYellowScene:" destination="bs9-3n-lGL" eventType="touchUpInside" id="bTc-kP-Dd1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t7c-lj-mNJ"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="1bs-tN-c3S" firstAttribute="top" secondItem="t7c-lj-mNJ" secondAttribute="top" constant="356" id="Pah-Lg-CK2"/>
+                            <constraint firstItem="1bs-tN-c3S" firstAttribute="leading" secondItem="t7c-lj-mNJ" secondAttribute="leading" constant="16" id="TK3-Tp-agL"/>
+                            <constraint firstItem="t7c-lj-mNJ" firstAttribute="trailing" secondItem="1bs-tN-c3S" secondAttribute="trailing" constant="16" id="gi4-4a-oqq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Зеленая сцена" prompt="Допольнительная ифнормация" id="bOc-bg-aJq">
+                        <barButtonItem key="backBarButtonItem" title="К красной сцене" id="rut-Vf-oZL"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kRr-Sn-1Pk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="bs9-3n-lGL" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4992.3076923076924" y="839.57345971563973"/>
+        </scene>
+        <!--Желтая сцена-->
+        <scene sceneID="41M-eL-qNm">
+            <objects>
+                <viewController storyboardIdentifier="yellowViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ISf-yK-M7U" customClass="ViewController" customModule="Navigation_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aS2-Kw-zhr">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKM-13-qJ9">
+                                <rect key="frame" x="16" y="400" width="358" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="К корневой сцене">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="toRootScene:" destination="ISf-yK-M7U" eventType="touchUpInside" id="9k3-LZ-Ryz"/>
+                                    <action selector="toRootScene:" destination="3YM-b2-3yK" eventType="touchUpInside" id="ICd-1H-mSY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J0X-iv-DHT"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="J0X-iv-DHT" firstAttribute="trailing" secondItem="kKM-13-qJ9" secondAttribute="trailing" constant="16" id="7bE-3b-ioT"/>
+                            <constraint firstItem="kKM-13-qJ9" firstAttribute="top" secondItem="J0X-iv-DHT" secondAttribute="top" constant="356" id="M7b-Sv-kep"/>
+                            <constraint firstItem="kKM-13-qJ9" firstAttribute="leading" secondItem="J0X-iv-DHT" secondAttribute="leading" constant="16" id="igt-RQ-m5U"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Желтая сцена" prompt="Допольнительная информация" id="Eis-UQ-gx2">
+                        <barButtonItem key="backBarButtonItem" title="К зеленой сцене" id="3In-Yh-0Nt"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2e-cl-9bJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="3YM-b2-3yK" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="5858.4615384615381" y="839.57345971563973"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5ML-PI-gJV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XbT-sx-uEy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2bW-3o-uI0">
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iRr-Zc-hgO" kind="relationship" relationship="rootViewController" id="HZk-Kz-eQS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3XM-11-HmH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3232.3076923076924" y="839.57345971563973"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
