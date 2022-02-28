@@ -12,6 +12,8 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var dataTextField: UITextField!
     
     var updatingData: String = ""
+    
+    var handleUpdatedDataDelegate: DataUpdateProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +32,21 @@ class SecondViewController: UIViewController {
     
     @IBAction func saveDataWithProperty(_ sender: Any) {
         self.navigationController?.viewControllers.forEach({ viewController in
-            (viewController as? ViewController)?.updateData = dataTextField.text ?? ""
+            (viewController as? ViewController)?.updatedData = dataTextField.text ?? ""
         })
+    }
+    
+    
+    // Переход от Б к А
+    // Передача данных с помощью делегата
+    @IBAction func saveDataWithDelegate (_ sender: UIButton) {
+        // получаем обновленные данные
+        let updatedData = dataTextField.text ?? ""
+        
+        // вызываем метод делегата
+        handleUpdatedDataDelegate?.onDataUpdate(data: updatedData)
+        
+        // возвращаемся на предыдущий экран
+        navigationController?.popViewController(animated: true)
     }
 }
