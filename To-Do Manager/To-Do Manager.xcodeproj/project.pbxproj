@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE081E1527D3592900D5F25D /* TaskEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE081E1427D3592900D5F25D /* TaskEditController.swift */; };
+		EE081E1927D3C70C00D5F25D /* TaskTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE081E1827D3C70C00D5F25D /* TaskTypeController.swift */; };
+		EE081E1C27D3CABB00D5F25D /* TaskTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE081E1A27D3CABB00D5F25D /* TaskTypeCell.swift */; };
+		EE081E1D27D3CABB00D5F25D /* TaskTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE081E1B27D3CABB00D5F25D /* TaskTypeCell.xib */; };
 		EE805C3027CEA67300E9B930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE805C2F27CEA67300E9B930 /* AppDelegate.swift */; };
 		EE805C3227CEA67300E9B930 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE805C3127CEA67300E9B930 /* SceneDelegate.swift */; };
 		EE805C3727CEA67300E9B930 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE805C3527CEA67300E9B930 /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE081E1427D3592900D5F25D /* TaskEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditController.swift; sourceTree = "<group>"; };
+		EE081E1827D3C70C00D5F25D /* TaskTypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTypeController.swift; sourceTree = "<group>"; };
+		EE081E1A27D3CABB00D5F25D /* TaskTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTypeCell.swift; sourceTree = "<group>"; };
+		EE081E1B27D3CABB00D5F25D /* TaskTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTypeCell.xib; sourceTree = "<group>"; };
 		EE805C2C27CEA67300E9B930 /* To-Do Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Do Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE805C2F27CEA67300E9B930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE805C3127CEA67300E9B930 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +75,8 @@
 				EE805C2F27CEA67300E9B930 /* AppDelegate.swift */,
 				EE805C3127CEA67300E9B930 /* SceneDelegate.swift */,
 				EE805C4527CEA7A800E9B930 /* TaskListController.swift */,
+				EE081E1427D3592900D5F25D /* TaskEditController.swift */,
+				EE081E1827D3C70C00D5F25D /* TaskTypeController.swift */,
 				EE805C3527CEA67300E9B930 /* Main.storyboard */,
 				EE805C3827CEA67400E9B930 /* Assets.xcassets */,
 				EE805C3A27CEA67400E9B930 /* LaunchScreen.storyboard */,
@@ -96,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				EEDCB0D227CFDC4C007A74E1 /* TaskCell.swift */,
+				EE081E1A27D3CABB00D5F25D /* TaskTypeCell.swift */,
+				EE081E1B27D3CABB00D5F25D /* TaskTypeCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -160,6 +172,7 @@
 			files = (
 				EE805C3C27CEA67400E9B930 /* LaunchScreen.storyboard in Resources */,
 				EE805C3927CEA67400E9B930 /* Assets.xcassets in Resources */,
+				EE081E1D27D3CABB00D5F25D /* TaskTypeCell.xib in Resources */,
 				EE805C3727CEA67300E9B930 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,8 +188,11 @@
 				EE805C3027CEA67300E9B930 /* AppDelegate.swift in Sources */,
 				EE805C3227CEA67300E9B930 /* SceneDelegate.swift in Sources */,
 				EE805C4B27CEAA2A00E9B930 /* TaskStorage.swift in Sources */,
+				EE081E1927D3C70C00D5F25D /* TaskTypeController.swift in Sources */,
 				EEDCB0D327CFDC4C007A74E1 /* TaskCell.swift in Sources */,
 				EE805C4627CEA7A800E9B930 /* TaskListController.swift in Sources */,
+				EE081E1527D3592900D5F25D /* TaskEditController.swift in Sources */,
+				EE081E1C27D3CABB00D5F25D /* TaskTypeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
