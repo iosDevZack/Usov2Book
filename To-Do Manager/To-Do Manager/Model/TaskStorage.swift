@@ -22,10 +22,10 @@ class TasksStorage: TasksStorageProtocol {
     // Ссылка на хранилище
     private var storage = UserDefaults.standard
     
-    // Ключ, по которому будет происходить сохранение и загрузка хранилища из User Defaults
+    // Ключ, по которому будет происходить сохранение и загрузка хранилища из User Default's
     var storageKey: String = "tasks"
     
-    // Перечисление с ключами для записи в User Defaults
+    // Перечисление с ключами для записи в User Default's
     private enum TaskKey: String {
         case title
         case type
