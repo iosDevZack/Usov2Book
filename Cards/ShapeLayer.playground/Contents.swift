@@ -20,6 +20,8 @@ class MyViewController : UIViewController {
         let secondCardView = CardView<CircleShape>(frame: CGRect(x: 200, y: 0, width: 120, height: 150), color: .red)
         self.view.addSubview(secondCardView)
         secondCardView.isFlipped = true
+        
+    
     }
 }
 // Present the view controller in the Live View window
@@ -284,6 +286,10 @@ class CardView<ShapeType: ShapeLayerProtocol>: UIView, FlippableView {
         let shapeLayer = ShapeType(size: shapeView.frame.size, fillColor: color.cgColor)
         shapeView.layer.addSublayer(shapeLayer)
         
+        // скругляем углы корневого слоя
+        view.layer.masksToBounds = true
+        view.layer.cornerRadius = CGFloat(cornerRadius)
+        
         return view
     }
     
@@ -304,25 +310,66 @@ class CardView<ShapeType: ShapeLayerProtocol>: UIView, FlippableView {
         default:
             break
         }
+        
+        // скругляем углы корневого слоя
+        view.layer.masksToBounds = true
+        view.layer.cornerRadius = CGFloat(cornerRadius)
+        
         return view
     }
     
+    // точка привязки
+    private var anchorPoint: CGPoint = CGPoint(x: 0, y: 0)
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touchesBegan Card")
+        // изменяем координаты точки привязки
+        anchorPoint.x = touches.first!.location(in: window).x - frame.minX
+        anchorPoint.y = touches.first!.location(in: window).y - frame.minY
+        
+        // сохраняем исходные координаты
+        startTouchPoint = frame.origin
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touchesMoved Card")
+        self.frame.origin.x = touches.first!.location(in: window).x - anchorPoint.x
+        self.frame.origin.y = touches.first!.location(in: window).y - anchorPoint.y
     }
     
+    private var startTouchPoint: CGPoint!
+
+//
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touchesEnded Card")
+        flip1()
         
+        // анимировано возвращаем карточку в исходную позицию
+//        UIView.animate(withDuration: 0.5) {
+//            self.frame.origin = self.startTouchPoint
+//
+//            // переворачиваем представление
+//            if self.transform.isIdentity {
+//                self.transform = CGAffineTransform(rotationAngle: .pi)
+//            } else {
+//                self.transform = .identity
+//            }
+//        }
     }
     
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touchesCancelled Card")
+    func flip1() {
+        // определяем, между какими представлениями осуществить переход
+        let fromView = isFlipped ? frontSideView : backSideView
+        let toView = isFlipped ? backSideView : frontSideView
+        
+        // запускаем анимированный переход
+        UIView.transition(from: fromView, to: toView, duration: 0.5, options: [.transitionFlipFromTop], completion: { _ in
+            // обработчик переворота
+            self.flipCompletionHandler?(self)
+        })
+        isFlipped = !isFlipped
     }
+//
+//    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        print("touchesCancelled Card")
+//    }
     
 }
 
@@ -332,3 +379,14 @@ extension ShapeLayerProtocol {
         fatalError("init() не может быть использован для создания экземпляра")
     }
 }
+
+extension UIResponder {
+    func responderChain() -> String {
+        guard let next = next else {
+            return String(describing: Self.self)
+        }
+        return String(describing: Self.self) + " -> " + next.responderChain()
+    }
+}
+
+
