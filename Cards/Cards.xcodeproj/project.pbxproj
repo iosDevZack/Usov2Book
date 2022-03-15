@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE11FA9A27E0CFF40021871E /* CardViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE11FA9927E0CFF40021871E /* CardViewFactory.swift */; };
 		EE8455ED27D64A81004F4F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8455EC27D64A81004F4F5B /* AppDelegate.swift */; };
 		EE8455EF27D64A81004F4F5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8455EE27D64A81004F4F5B /* SceneDelegate.swift */; };
 		EE8455F127D64A81004F4F5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8455F027D64A81004F4F5B /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE11FA9927E0CFF40021871E /* CardViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewFactory.swift; sourceTree = "<group>"; };
 		EE8455E927D64A81004F4F5B /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8455EC27D64A81004F4F5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE8455EE27D64A81004F4F5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,9 +49,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE11FA9827E0CFDD0021871E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EE11FA9927E0CFF40021871E /* CardViewFactory.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		EE8455E027D64A81004F4F5B = {
 			isa = PBXGroup;
 			children = (
+				EE11FA9827E0CFDD0021871E /* Helpers */,
 				EEC5091627DFD9E70006933F /* Model */,
 				EEC5091327DFD89D0006933F /* Controller */,
 				EEC5090D27DFD6A10006933F /* View */,
@@ -188,6 +199,7 @@
 				EEC5091527DFD8C40006933F /* BoardGameController.swift in Sources */,
 				EEC5091127DFD6CA0006933F /* Cards.swift in Sources */,
 				EEC5091827DFD9F50006933F /* Card.swift in Sources */,
+				EE11FA9A27E0CFF40021871E /* CardViewFactory.swift in Sources */,
 				EE8455F127D64A81004F4F5B /* ViewController.swift in Sources */,
 				EE8455ED27D64A81004F4F5B /* AppDelegate.swift in Sources */,
 				EE8455EF27D64A81004F4F5B /* SceneDelegate.swift in Sources */,

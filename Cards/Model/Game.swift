@@ -16,6 +16,7 @@ class Game {
     
     // генерация массива случайных карт
     func generationCards() {
+        
         // генерируем новый массив карточек
         var cards = [Card]()
         for _ in 0...cardsCount {
